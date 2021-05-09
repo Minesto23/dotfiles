@@ -1,7 +1,5 @@
 # ARCH Linux Install guide
-This is a guide to help you in your path to install arch Linux, I will try to be very clearly with every step
-in the installation process. (Remember all the step in this guide and more you can find there the Arch Linux Wiki, I recommend check the wiki).
-
+.screenshots/qtile.png
 # Table of Contents
 - [Overview](#overview)
 - [Set the keyboard layout](set-the-keyboard-layout)
@@ -24,6 +22,9 @@ in the installation process. (Remember all the step in this guide and more you c
 - [Reboot](reboot)
 
 # Overview
+This is a guide to help you in your path to install arch Linux, I will try to be very clearly with every step
+in the installation process. (Remember all the step in this guide and more you can find there the Arch Linux Wiki, I recommend check the wiki).
+
 This guide explains the step after boot arch in a USB, the previous step don't be explained.
 
 # Set the keyboard layout
