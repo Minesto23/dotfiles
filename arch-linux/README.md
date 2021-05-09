@@ -1,5 +1,5 @@
 # ARCH Linux Install guide
-.screenshots/qtile.png
+.arch.png
 # Table of Contents
 - [Overview](#overview)
 - [Set the keyboard layout](set-the-keyboard-layout)
