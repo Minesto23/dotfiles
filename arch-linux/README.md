@@ -1,6 +1,5 @@
 # ARCH Linux Install guide
-https://github.com/Minesto23/dotfiles/blob/main/arch-linux/arch.png
-(https://github.com/Minesto23/dotfiles/blob/main/arch-linux/arch.png)
+![ARCH](https://github.com/Minesto23/dotfiles/blob/main/arch-linux/arch.png)
 # Table of Contents
 - [Overview](#overview)
 - [Set the keyboard layout](set-the-keyboard-layout)
