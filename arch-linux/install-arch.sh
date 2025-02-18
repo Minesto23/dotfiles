@@ -167,7 +167,7 @@ git clone https://github.com/Minesto23/dotfiles.git /mnt/home/dotfiles
 echo -e "${GREEN}Script downloaded and now time to execute it! 🎉${RESET}"
 # Make the downloaded script executable
 echo -e "${YELLOW}Making the script executable... 🖥️${RESET}"
-chmod +x /mnt/home/dotfiles/arch/install_chroot.sh
+chmod +x /mnt/home/dotfiles/arch-linux/install_chroot.sh
 arch-chroot /mnt
 sleep 2
 
