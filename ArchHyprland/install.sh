@@ -26,7 +26,7 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 # Automatically set preset values for configuration
-use_preset="Y" # This will assume that you want to use the preset settings automatically
+use_preset="Y"  # This will assume that you want to use the preset settings automatically
 
 # nvidia
 nvidia="Y"  # Automatically enable Nvidia GPU configuration
@@ -50,6 +50,11 @@ pokemon_choice="Y"
 rog="Y"
 dots="Y"
 
+# Ask for sudo password at the beginning of the script and store it in a variable
+echo -n "${YELLOW}Please enter your sudo password: ${RESET}"
+read -s sudo_password
+echo
+
 # Check if PulseAudio package is installed
 if pacman -Qq | grep -qw '^pulseaudio$'; then
     echo "$ERROR PulseAudio is detected as installed. Uninstall it first or edit install.sh on line 211 (execute_script 'pipewire.sh')."
@@ -62,7 +67,8 @@ if pacman -Q base-devel &> /dev/null; then
 else
     echo "$NOTE Install base-devel.........."
 
-    if sudo pacman -S --noconfirm base-devel; then
+    echo "$sudo_password" | sudo -S pacman -S --noconfirm base-devel
+    if [ $? -eq 0 ]; then
         echo "$OK base-devel has been installed successfully."
     else
         echo "$ERROR base-devel not found nor cannot be installed."
@@ -74,7 +80,7 @@ fi
 clear
 
 # Welcome message
-echo "${SKY_BLUE}Welcome to JaKooLit's Arch-Hyprland (2025) Install Script!${RESET}"
+echo "${SKY_BLUE}Welcome to Minesto's Arch-Hyprland (2025) Install Script!${RESET}"
 
 # Automatically proceed without asking
 echo "${INFO} Automatically proceeding with installation..."
@@ -82,7 +88,7 @@ echo "${INFO} Automatically proceeding with installation..."
 # install pciutils if detected not installed. Necessary for detecting GPU
 if ! pacman -Qs pciutils > /dev/null; then
     echo "pciutils is not installed. Installing..."
-    sudo pacman -S --noconfirm pciutils
+    echo "$sudo_password" | sudo -S pacman -S --noconfirm pciutils
 fi
 
 # Create Directory for Install Logs
